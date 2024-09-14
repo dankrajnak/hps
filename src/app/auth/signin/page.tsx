@@ -63,8 +63,14 @@ export default function SignIn() {
                     let callback = null;
                     if (resp?.url) {
                       const url = new URL(resp.url);
-                      console.log(url, url.searchParams);
                       callback = url.searchParams.get("callbackUrl");
+                      // if the callback is to the root page, don't use it.
+                      if (
+                        callback != null &&
+                        new URL(callback).pathname === "/"
+                      ) {
+                        callback = null;
+                      }
                     }
                     router.push(callback ?? "/p/home");
                   }
