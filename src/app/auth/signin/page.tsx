@@ -38,10 +38,26 @@ export default function SignIn() {
               <form
                 onSubmit={async (e) => {
                   e.preventDefault();
+
+                  let password;
+                  // dumb way of getting the password from the form.
+                  if (
+                    "password" in e.target &&
+                    e.target.password != null &&
+                    typeof e.target.password === "object" &&
+                    "value" in e.target.password
+                  ) {
+                    password = e.target.password.value;
+                  }
+
+                  if (!password) {
+                    throw new Error("Password must be provided.");
+                  }
+
                   const resp = await signIn("credentials", {
                     redirect: false,
                     isDan: false,
-                    password: "test",
+                    password,
                   });
                   if (resp?.ok) {
                     let callback = null;
@@ -56,6 +72,7 @@ export default function SignIn() {
               >
                 <div className="flex">
                   <Input
+                    name="password"
                     className="flex-grow rounded-r-none"
                     placeholder="password"
                     type="password"
