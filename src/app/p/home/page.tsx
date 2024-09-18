@@ -22,7 +22,7 @@ export default function Home() {
 
   return (
     <>
-      <main className="container mx-auto flex min-h-screen flex-col items-center justify-center py-10">
+      <main className="container mx-auto flex min-h-screen flex-col items-center justify-center p-10">
         {gotPicture && (
           <motion.div
             initial={{ height: 0, opacity: 0 }}

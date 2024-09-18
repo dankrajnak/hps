@@ -8,7 +8,7 @@ import {
   CardHeader,
   CardTitle,
 } from "~/components/ui/card";
-import { signIn, getProviders, getCsrfToken } from "next-auth/react";
+import { signIn } from "next-auth/react";
 
 import { Input } from "~/components/ui/input";
 import { ColorOverlay } from "~/components/colorOverlay";
@@ -18,7 +18,7 @@ export default function SignIn() {
   const router = useRouter();
   return (
     <>
-      <main className="mx-auto flex h-screen items-center justify-center">
+      <main className="container mx-auto flex h-screen items-center justify-center p-8">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{
