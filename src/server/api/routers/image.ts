@@ -6,13 +6,13 @@ import {
 } from "~/server/api/trpc";
 import { z } from "zod";
 
-type ImageOutput = {
+export type ImageOutput = {
   images: {
     url: string;
     width: number;
     height: number;
     content_type: string;
-  };
+  }[];
   has_nsfw_concepts: boolean[];
   prompt: string;
 };

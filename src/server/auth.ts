@@ -68,7 +68,12 @@ export const authOptions: NextAuthOptions = {
           return null;
         }
 
-        const name = Boolean(false) ? "dan" : "hailey";
+        let name;
+        try {
+          name = JSON.parse(credentials.isDan) ? "dan" : "hailey";
+        } catch (_) {
+          name = "hailey";
+        }
         const hashedPassword = await bcrypt.hash(credentials.password, 10);
         const user = (
           await db.select().from(users).where(eq(users.name, name)).limit(1)
