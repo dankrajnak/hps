@@ -8,7 +8,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        display: ["PP Eiko"],
+        display: ["Eiko"],
         sans: ["var(--font-inconsolata)", ...fontFamily.sans],
       },
 
