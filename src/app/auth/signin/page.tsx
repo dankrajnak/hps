@@ -28,10 +28,10 @@ export default function SignIn() {
         >
           <Card>
             <CardHeader>
-              <CardTitle>Hey Hailey.</CardTitle>
+              <CardTitle>Hailey&apos;s Sign in.</CardTitle>
               <CardDescription>
-                Enter a password so only you can access this.{" "}
-                <i>Please use a password generator</i>
+                Enter a password so only you can access the site. Please use a
+                password generator 🥺👉👈.
               </CardDescription>
             </CardHeader>
             <CardContent>
