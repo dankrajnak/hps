@@ -23,7 +23,7 @@ export default function Home() {
 
   return (
     <>
-      <main className="container mx-auto flex h-screen flex-col items-center justify-center px-8 py-16 min-h-screen-ios">
+      <main className="container mx-auto flex min-h-screen flex-col items-center justify-center px-8 py-16 min-h-screen-ios">
         {picture && (
           <motion.div
             initial={{ height: 0, opacity: 0 }}
