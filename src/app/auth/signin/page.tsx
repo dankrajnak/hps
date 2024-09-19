@@ -81,6 +81,7 @@ export default function SignIn() {
                     className="flex-grow rounded-r-none"
                     placeholder="password"
                     type="password"
+                    autoComplete="new-password"
                   />
                   <Button type="submit" className="rounded-l-none">
                     sign in
