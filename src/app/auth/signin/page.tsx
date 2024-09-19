@@ -30,8 +30,7 @@ export default function SignIn() {
             <CardHeader>
               <CardTitle>Hailey&apos;s Sign in.</CardTitle>
               <CardDescription>
-                Enter a password so only you can access the site. Please use a
-                password generator 🥺👉👈.
+                Enter a password so only you can access the site.
               </CardDescription>
             </CardHeader>
             <CardContent>
