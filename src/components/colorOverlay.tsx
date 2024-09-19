@@ -41,7 +41,7 @@ export const ColorOverlay = ({
       initial={animateOnMount ? "initial" : "show"}
       animate="show"
       variants={holder}
-      className={classnames("fixed left-0 top-0 flex h-screen")}
+      className={classnames("fixed left-0 top-0 flex h-screen h-screen-ios")}
     >
       {bars.map((bar, i) => (
         <motion.div

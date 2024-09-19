@@ -1,6 +1,8 @@
 import { type Config } from "tailwindcss";
 import { fontFamily } from "tailwindcss/defaultTheme";
 import taiwindAnimate from "tailwindcss-animate";
+// @ts-expect-error there isn't a declaration file for this.
+import iOSHeight from "@rvxlab/tailwind-plugin-ios-full-height";
 
 export default {
   darkMode: ["class"],
@@ -37,5 +39,5 @@ export default {
       },
     },
   },
-  plugins: [taiwindAnimate],
+  plugins: [taiwindAnimate, iOSHeight],
 } satisfies Config;

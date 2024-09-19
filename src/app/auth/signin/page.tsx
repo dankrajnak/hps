@@ -18,7 +18,7 @@ export default function SignIn() {
   const router = useRouter();
   return (
     <>
-      <main className="container mx-auto flex h-screen items-center justify-center p-8">
+      <main className="container mx-auto flex h-screen items-center justify-center p-8 h-screen-ios">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{

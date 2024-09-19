@@ -55,7 +55,7 @@ const HomeContent = () => {
   }, [finishedTyping, router]);
   return (
     <>
-      <main className="container mx-auto flex h-screen items-center justify-center p-8">
+      <main className="container mx-auto flex h-screen items-center justify-center p-8 h-screen-ios">
         <AnimatePresence>
           {!finishedTyping && (
             <motion.div
