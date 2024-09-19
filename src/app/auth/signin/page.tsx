@@ -13,9 +13,11 @@ import { signIn } from "next-auth/react";
 import { Input } from "~/components/ui/input";
 import { ColorOverlay } from "~/components/colorOverlay";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 
 export default function SignIn() {
   const router = useRouter();
+  const [isHailey, setIsHailey] = useState(true);
   return (
     <>
       <main className="container mx-auto flex h-screen items-center justify-center p-8 h-screen-ios">
@@ -28,7 +30,7 @@ export default function SignIn() {
         >
           <Card>
             <CardHeader>
-              <CardTitle>Hailey&apos;s Sign in.</CardTitle>
+              <CardTitle>{isHailey ? "Hailey's" : "Dan's"} sign in.</CardTitle>
               <CardDescription>
                 Enter a password so only you can access the site.
               </CardDescription>
@@ -55,7 +57,7 @@ export default function SignIn() {
 
                   const resp = await signIn("credentials", {
                     redirect: false,
-                    isDan: false,
+                    isDan: !isHailey,
                     password,
                   });
                   if (resp?.ok) {
@@ -92,6 +94,12 @@ export default function SignIn() {
           </Card>
         </motion.div>
       </main>
+
+      <button
+        className="fixed bottom-0 right-0 m-0 h-8 w-8 cursor-default opacity-0"
+        aria-hidden="true"
+        onClick={() => setIsHailey((h) => !h)}
+      />
 
       <ColorOverlay animateOnMount={false} />
     </>
